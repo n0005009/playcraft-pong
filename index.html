@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="//MrSlayer.com/images/favicon.png" />
+		<link rel="stylesheet" href="styles/game.css" />
+		
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+		<meta name="viewport" content="user-scalable=no, maximum-scale=1.0, width=device-width, height=device-height" />
+		
+		<title>Pong Demo</title>
+		
+		<!-- Production mode (minified and packed) -->
+		<script type="text/javascript" src="playcraftjs/dist/playcraft-0.5.5.min.js"></script>
+		<!--<script type="text/javascript" src="playcraftjs/lib/playcraft.js"></script>-->
+		<script src="//MrSlayer.com/scripts/analytics.js" type="text/javascript"></script>
+				
+		<script type="text/javascript">
+			pc.start( 'viewport', 'Pong', 'scripts/', [
+			    'modules/querystring.js?' + Date.now( ),
+				'entities/ball.js?' + Date.now( ),
+				'entities/opponent.js?' + Date.now( ),
+				'entities/player.js?' + Date.now( ),
+				'layers/hudLayer.js?' + Date.now( ),
+				'layers/gameplayLayer.js?' + Date.now( ),
+				'scenes/gameplayScene.js?' + Date.now( ),
+				'scenes/titleScene.js?' + Date.now( ),
+				'game.js?' + Date.now( ),
+			] );
+		</script>
+	</head>
+	
+	<body>
+		<canvas id="viewport"></canvas>
+	</body>
+</html>
